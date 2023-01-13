@@ -31,7 +31,6 @@
     background-color: $theme-bg;
     transition: transform 0.3s ease-in-out;
 
-
     @media screen and (max-width: 900px) {
         height: 0;
         position: absolute;
@@ -40,13 +39,11 @@
         padding: 8rem 2rem 4rem 2rem;
         top: -50rem;
 
-
         &--open {
             display: flex;
             height: 50rem;
             transform: translateY(50rem);
         }
-
     }
 
     &__list {

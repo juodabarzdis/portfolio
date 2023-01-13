@@ -14,7 +14,7 @@
 
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-paragraph;
     background-color: $theme-bg;
 }
 
@@ -29,13 +29,13 @@ button {
     text-decoration: none;
     color: $theme-green;
     font-size: $text-paragraph;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-paragraph;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Medium", sans-serif;
+    font-family: $font-decorative;
     font-size: $heading-medium;
     font-weight: 300;
     color: $theme-green;
@@ -50,15 +50,8 @@ h2 {
     margin-bottom: 1rem;
 }
 
-h3 {
-    font-family: 'Roboto', sans-serif;
-    font-size: $heading-small;
-    color: $grey;
-    margin-block: 1rem;
-}
-
 p {
+    font-family: $font-paragraph;
     font-size: $text-paragraph;
-    font-weight: 300;
-    line-height: 3.2rem;
+    color: $theme-green;
 }
