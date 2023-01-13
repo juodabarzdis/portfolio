@@ -1,0 +1,38 @@
+.button {
+    border: 2px solid $theme-green;
+    background-color: transparent;
+    color: $theme-green;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    text-transform: uppercase;
+
+    &::before {
+        background-color: #194027;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease;
+    }
+
+    &:hover::before {
+        top: 0;
+    }
+
+    &:hover {
+        color: #ffffff;
+        transition: 0.25s;
+    }
+}
