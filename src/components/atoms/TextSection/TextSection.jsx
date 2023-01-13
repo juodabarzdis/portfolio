@@ -1,20 +1,15 @@
 import { useEffect } from "react";
-import { useAnimation, motion, delay } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styles from "./TextSection.module.scss";
 
 const TextSection = () => {
-  //text appear on scroll to view
-
   const controls = useAnimation();
-  const { ref, inView } = useInView();
+  const [ref, inView] = useInView();
 
   useEffect(() => {
     if (inView) {
       controls.start("visible");
-    }
-    if (!inView) {
-      controls.start("hidden");
     }
   }, [controls, inView]);
 
@@ -29,8 +24,8 @@ const TextSection = () => {
       ref={ref}
       animate={controls}
       initial="hidden"
-      transition={{ duration: 0.5, delay: 0.1 }}
       variants={variants}
+      transition={{ duration: 1, delay: 0.5 }}
     >
       <div className={styles["title-container"]}>
         <p className={styles["title-container__title"]}>About me</p>

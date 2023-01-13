@@ -1,7 +1,9 @@
 .text-section {
+    border-top: 1px solid $theme-green;
     display: flex;
     justify-content: center;
-    padding-block: 10rem;
+    margin-block: 5rem;
+    padding-block: 5rem;
     padding-inline: calc(2vw - 2rem);
 
 
