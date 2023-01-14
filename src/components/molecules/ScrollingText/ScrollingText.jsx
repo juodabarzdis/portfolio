@@ -1,15 +1,17 @@
 import Marquee from "react-fast-marquee";
 import styles from "./ScrollingText.module.scss";
 
-const ScrollingText = () => {
+const ScrollingText = (props) => {
+  const { children, color, gradient = [232, 225, 253] } = props;
+
   return (
     <Marquee
       className={styles.container}
-      gradientColor={[232, 225, 253]}
-      gradient="none"
+      style={{ backgroundColor: color }}
+      gradientColor={gradient}
       speed={180}
     >
-      <p className={styles.text}>Well hello there Gintare.</p>
+      <p className={styles.text}>{children}</p>
     </Marquee>
   );
 };

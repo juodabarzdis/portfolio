@@ -3,7 +3,8 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styles from "./TextSection.module.scss";
 
-const TextSection = () => {
+const TextSection = (props) => {
+  const { children, title } = props;
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -28,17 +29,10 @@ const TextSection = () => {
       transition={{ duration: 1, delay: 0.5 }}
     >
       <div className={styles["title-container"]}>
-        <p className={styles["title-container__title"]}>About me</p>
+        <p className={styles["title-container__title"]}>{title}</p>
       </div>
       <div className={styles["content-container"]}>
-        <p className={styles["content-container__text"]}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolor,
-          ea, temporibus inventore suscipit, in voluptate facilis neque eos modi
-          est quod voluptates expedita? Voluptas, vero doloremque molestiae
-          minima vel officiis accusamus culpa non nemo quaerat? Cumque quisquam
-          saepe cum incidunt, ipsum nam unde ea nobis? Iste corrupti earum
-          ullam?
-        </p>
+        <p className={styles["content-container__text"]}>{children}</p>
       </div>
     </motion.div>
   );
