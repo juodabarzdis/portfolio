@@ -25,27 +25,39 @@ const Navigation = () => {
     [styles["navigation--close"]]: !isOpen,
   });
 
+  const burgerClass = classNames(styles["burger-menu__line"], {
+    [styles["burger-menu__line--open"]]: isOpen,
+  });
+
   return (
     <nav className={styles["navigation-wrapper"]}>
-      <button className={styles["burger-menu"]} onClick={handleOpen}>
-        <p>menu</p>
-      </button>
+      <div className={styles["burger-menu"]} onClick={handleOpen}>
+        <div className={burgerClass}></div>
+        <div className={burgerClass}></div>
+        <div className={burgerClass}></div>
+      </div>
       <div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
         className={menuClass}
       >
-        <Link to="/">Lukas Baksys</Link>
+        <Link onClick={handleOpen} to="/">
+          Lukas Baksys
+        </Link>
         <ul className={styles.navigation__list}>
           <li className={styles.navigation__item}>
-            <Link to="/about">About</Link>
+            <Link onClick={handleOpen} to="/about">
+              About
+            </Link>
           </li>
           <li className={styles.navigation__item}>
-            <Link to="/projects">Projects</Link>
+            <Link onClick={handleOpen} to="/projects">
+              Projects
+            </Link>
           </li>
         </ul>
-        <Button>Hire me</Button>
+        <Button onClick={handleOpen}>Hire me</Button>
       </div>
     </nav>
   );

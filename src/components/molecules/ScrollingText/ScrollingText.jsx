@@ -7,12 +7,9 @@ const ScrollingText = () => {
       className={styles.container}
       gradientColor={[232, 225, 253]}
       gradient="none"
-      speed={60}
+      speed={180}
     >
-      <p className={styles.text}>
-        I can be a React component, multiple React components, or just some
-        text.
-      </p>
+      <p className={styles.text}>Well hello there Gintare.</p>
     </Marquee>
   );
 };

@@ -40,8 +40,10 @@ const Article = () => {
         variants={variants}
         transition={{ duration: 1.5, delay: 1.5 }}
       >
-        <img src={Image2} alt="Person 2" />
-        <p>The second image</p>
+        <div className={styles["image-container"]}>
+          <img src={Image2} alt="Person 2" />
+          <p>The second image</p>
+        </div>
       </motion.div>
     </motion.section>
   );
