@@ -1,0 +1,19 @@
+.container {
+    max-width: 144rem;
+    margin: 0 auto;
+
+    @media (max-width: 1100px) {
+        margin: 8rem auto 0;
+    }
+}
+
+.heading {
+    font-size: calc(var(--heading-medium) + 10vw);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+        font-size: calc(var(--heading-medium) + 5vw);
+    }
+}
