@@ -8,10 +8,6 @@ import Button from "../Button/Button";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleOpen = () => {
-    setIsOpen(!isOpen);
-  };
-
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -31,7 +27,7 @@ const Navigation = () => {
 
   return (
     <nav className={styles["navigation-wrapper"]}>
-      <div className={styles["burger-menu"]} onClick={handleOpen}>
+      <div className={styles["burger-menu"]} onClick={() => setIsOpen(!isOpen)}>
         <div className={burgerClass}></div>
         <div className={burgerClass}></div>
         <div className={burgerClass}></div>
@@ -42,22 +38,22 @@ const Navigation = () => {
         transition={{ delay: 0.5 }}
         className={menuClass}
       >
-        <Link onClick={handleOpen} to="/">
+        <Link onClick={() => setIsOpen(false)} to="/">
           Lukas Baksys
         </Link>
         <ul className={styles.navigation__list}>
           <li className={styles.navigation__item}>
-            <Link onClick={handleOpen} to="/about">
+            <Link onClick={() => setIsOpen(false)} to="/about">
               About
             </Link>
           </li>
           <li className={styles.navigation__item}>
-            <Link onClick={handleOpen} to="/projects">
+            <Link onClick={() => setIsOpen(false)} to="/projects">
               Projects
             </Link>
           </li>
         </ul>
-        <Button onClick={handleOpen}>Hire me</Button>
+        <Button onClick={() => setIsOpen(false)}>Hire me</Button>
       </div>
     </nav>
   );
