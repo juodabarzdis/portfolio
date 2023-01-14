@@ -3,7 +3,7 @@ import styles from "./Home.module.scss";
 
 import Hero from "../../components/molecules/hero/Hero";
 import TextSection from "../../components/atoms/TextSection";
-import Article from "../../components/molecules/Article/Article";
+import Article from "../../components/molecules/Article";
 import ScrollingText from "../../components/molecules/ScrollingText";
 
 import Image from "../../assets/images/image-asset.jpeg";
