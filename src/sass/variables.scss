@@ -1,16 +1,38 @@
- $font-decorative: "Medium";
- $font-paragraph: 'Roboto',
-     sans-serif;
+:root {
+    --font-decorative: "Medium";
+    --font-paragraph: 'Roboto', sans-serif;
 
- $heading-large: 10rem;
- $heading-medium: 6.4rem;
- $heading-small : 2.8rem;
- $text-paragraph: 2rem;
+    --heading-large: 10rem;
+    --heading-medium: 6.4rem;
+    --heading-small: 2.8rem;
+    --text-paragraph: 2rem;
 
- $black: #000000;
- $white: #ffffff;
- $grey: #545454;
+    --black: #000000;
+    --white: #ffffff;
+    --grey: #545454;
 
- $theme-bg: #fff6ed;
- $theme-green: #194027;
- $theme-orange: #ed6b2d;
+    --theme-bg: #fff6ed;
+    --theme-green: #194027;
+    --theme-orange: #ed6b2d;
+    --theme-yellow: #eff483;
+    --theme-purple: #e8e1fd;
+}
+
+$font-decorative: "Medium";
+$font-paragraph: 'Roboto',
+    sans-serif;
+
+$heading-large: 10rem;
+$heading-medium: 6.4rem;
+$heading-small : 2.8rem;
+$text-paragraph: 2rem;
+
+$black: #000000;
+$white: #ffffff;
+$grey: #545454;
+
+$theme-bg: #fff6ed;
+$theme-green: #194027;
+$theme-orange: #ed6b2d;
+$theme-yellow: #eff483;
+$theme-purple: #e8e1fd;

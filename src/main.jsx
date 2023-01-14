@@ -7,8 +7,10 @@ import "./sass/main.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <React.Suspense fallback={<div>Loading...</div>}>
+      <Router>
+        <App />
+      </Router>
+    </React.Suspense>
   </React.StrictMode>
 );

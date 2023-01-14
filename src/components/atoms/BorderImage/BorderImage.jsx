@@ -1,14 +1,14 @@
 import React from "react";
-import Image from "../../../assets/images/image-asset.jpeg";
-import Shape from "../../../assets/images/Border.jsx";
 import styles from "./BorderImage.module.scss";
 
-const BorderImage = () => {
+const BorderImage = (props) => {
+  const { border: Border, image: Image, color } = props;
+
   return (
-    <div className={styles.frame}>
+    <div className={styles.frame} style={{ backgroundColor: color }}>
       <img className={styles.frame__img} src={Image} alt="image" />
-      <div className={styles.frame__shape}>
-        <Shape />
+      <div className={styles.frame__shape} style={{ fill: color }}>
+        <Border />
       </div>
     </div>
   );

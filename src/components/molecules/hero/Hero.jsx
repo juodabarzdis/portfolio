@@ -2,10 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./Hero.module.scss";
 import BorderImage from "../../atoms/BorderImage";
+import classNames from "classnames";
 
-const Hero = () => {
+const Hero = (props) => {
+  const { children, border: Border, image: Image, reverse, color } = props;
+
+  const containerClass = classNames(styles.hero, {
+    [styles["hero--reverse"]]: props.reverse,
+  });
+
   return (
-    <div className={styles.hero}>
+    <div className={containerClass}>
       <div className={styles["content-container"]}>
         <motion.div
           initial={{ opacity: 0, y: -100 }}
@@ -13,23 +20,20 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className={styles["content-container__hello"]}
         >
-          <h1 className={styles["content-container__heading"]}>
-            Hello World! This is Lukas calling.
-          </h1>
+          {children}
         </motion.div>
       </div>
-      <div className={styles["image-container"]}>
+      <div
+        className={styles["image-container"]}
+        style={{ backgroundColor: color }}
+      >
         <motion.div
-          initial={{
-            clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
-          }}
-          animate={{
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-          }}
+          initial={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
+          animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
           transition={{ duration: 1 }}
           className={styles["image-container__image"]}
         >
-          <BorderImage />
+          <BorderImage image={Image} border={Border} color={color} />
         </motion.div>
       </div>
     </div>
