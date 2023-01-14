@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Home.module.scss";
 
-import Hero from "../../components/molecules/Hero";
+import Hero from "../../components/molecules/hero/Hero";
 import TextSection from "../../components/atoms/TextSection";
 import Article from "../../components/molecules/Article/Article";
 import ScrollingText from "../../components/molecules/ScrollingText";
