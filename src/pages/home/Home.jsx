@@ -13,7 +13,7 @@ import Border from "../../assets/images/Border.jsx";
 const Home = () => {
   return (
     <div className={styles.home}>
-      <Hero image={Image2} border={Border} color="var(--theme-yellow)">
+      <Hero image={Image2} border={Border}>
         <h1>Hello World! This is Lukas calling.</h1>
       </Hero>
       <div className={styles.middle}>
@@ -22,12 +22,7 @@ const Home = () => {
         <TextSection />
         <TextSection />
       </div>
-      <Hero
-        image={Image}
-        border={Border}
-        reverse="true"
-        color="var(--theme-orange)"
-      >
+      <Hero image={Image} border={Border} reverse="true">
         <h1>Contact me!</h1>
       </Hero>
       <ScrollingText />
