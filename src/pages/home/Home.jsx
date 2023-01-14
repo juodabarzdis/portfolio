@@ -13,18 +13,23 @@ import Border from "../../assets/images/Border.jsx";
 const Home = () => {
   return (
     <div className={styles.home}>
-      <Hero image={Image2} border={Border}>
+      {/* <Hero image={Image2} border={Border} color="var(--theme-yellow)">
         <h1>Hello World! This is Lukas calling.</h1>
-      </Hero>
+      </Hero> */}
       <div className={styles.middle}>
         <TextSection />
         <Article />
         <TextSection />
         <TextSection />
       </div>
-      <Hero image={Image} border={Border} reverse="true">
-        <h1>Contact me!</h1>
-      </Hero>
+      {/* <Hero
+        image={Image}
+        border={Border}
+        reverse="true"
+        color="var(--theme-orange)"
+      > */}
+      {/* <h1>Contact me!</h1>
+      </Hero> */}
       <ScrollingText />
     </div>
   );
